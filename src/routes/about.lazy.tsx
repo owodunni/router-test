@@ -22,5 +22,5 @@ export const Route = createLazyFileRoute('/about')({
 
 function About() {
   const { page, filter, sort } = Route.useSearch()
-  return <div className="p-2">Hello from About! windowSearch={window.location.search} page={page} filter={filter} sort={sort}</div>
+  return <div className="p-2">windowSearch={window.location.search} page={page} filter={filter} sort={sort}</div>
 }

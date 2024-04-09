@@ -1,5 +1,8 @@
-import { createLazyFileRoute } from '@tanstack/react-router'
+import { createLazyFileRoute, redirect } from '@tanstack/react-router'
 
 export const Route = createLazyFileRoute('/')({
-  component: () => <div>Hello /!</div>
+  component: () => <div>Hello asd/!</div>,
+  beforeLoad: () => {
+    throw redirect({ to: "/about", search: {page:1}, replace: true });
+  },
 })
